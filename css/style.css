@@ -1,0 +1,100 @@
+* {
+  --cor-primaria: #000000;
+  --cor-secundaria: #FF6347;
+  --cor-fundo: #F5F5F5;
+  --cor-texto: #F5F5F5;
+  font-family: poppins, sans-serif;
+  --cor-botao: #bb1c00;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--cor-primaria);
+  position: relative;
+  height: 80px; /* altura uniforme opcional */
+}
+
+/* Links centrais (somente no desktop) */
+.central-links {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 25px;
+}
+
+/* Links gerais */
+.nav-link {
+  color: var(--cor-texto) !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--cor-secundaria) !important;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 991px) {
+  .central-links {
+    position: static;        /* volta ao fluxo normal */
+    transform: none;
+    justify-content: center; /* centraliza dentro do colapso */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    height: auto; /* deixa o tamanho flexível no mobile */
+  }
+}
+
+.imagens-mvv {
+    width: 250px; height: 250px; border-radius: 50%;
+}
+
+.btn-midia-ins {
+    background-color: #383838; border-radius: 50%; height: fit-content; padding-top: 5px; padding-bottom: 5px;
+}
+.btn-midia-ins:hover {
+    background-color: var(--cor-botao);
+    transition: 0.3s;
+}
+.btn-midia-you {
+    background-color: #383838; border-radius: 50%; height: fit-content; padding-top: 5px; padding-bottom: 5px;
+}
+.btn-midia-you:hover {
+    background-color: var(--cor-botao);
+    transition: 0.3s;
+}
+@media (max-width: 738px) {
+  
+}
+
+/* Altura padrão da navbar (telas grandes) */
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Altura menor da navbar em telas menores que 738px */
+@media (max-width: 738px) {
+  .navbar {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .navbar-brand img {
+    width: 90px; /* diminui a logo */
+  }
+
+  .navbar-toggler img {
+    width: 25px;
+    height: 25px; /* diminui o ícone do menu */
+  }
+
+  .nav-link {
+    font-size: 14px; /* opcional, deixa os links menores */
+  }
+}
