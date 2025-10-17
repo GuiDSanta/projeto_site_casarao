@@ -11,7 +11,7 @@
 .navbar {
   background-color: var(--cor-primaria);
   position: relative;
-  height: 80px; /* altura uniforme opcional */
+  height: 80px;
   z-index: 1050;
 }
 
@@ -36,50 +36,81 @@
   color: var(--cor-secundaria) !important;
 }
 
-/* --- Responsividade --- */
+/* --- Responsividade navbar --- */
 @media (max-width: 991px) {
   .central-links {
-    position: static;        /* volta ao fluxo normal */
+    position: static;
     transform: none;
-    justify-content: center; /* centraliza dentro do colapso */
+    justify-content: center;
     width: 100%;
     margin-top: 10px;
   }
 
   .navbar {
-    height: auto; /* deixa o tamanho flexível no mobile */
+    height: auto;
   }
 }
 
+/* ======== SEÇÃO SOBRE ======== */
+
+/* Imagens redondas e grandes */
 .imagens-mvv {
-    width: 250px; height: 250px; border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-.btn-midia-ins {
-    background-color: #383838; border-radius: 50%; height: fit-content; padding-top: 5px; padding-bottom: 5px;
+/* Cards da seção Sobre */
+#sobre .col-md-4 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  padding: 2.5rem 1.5rem;
 }
-.btn-midia-ins:hover {
-    background-color: var(--cor-botao);
-    transition: 0.3s;
+
+/* Hover suave nos cards */
+#sobre .col-md-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* Espaçamento entre os cards e correção responsiva */
+#sobre .row {
+  gap: 2rem !important; /* adiciona espaçamento entre os cards */
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  #sobre .col-md-4 {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+/* ======== BOTÕES DE MÍDIA ======== */
+.btn-midia-ins,
 .btn-midia-you {
-    background-color: #383838; border-radius: 50%; height: fit-content; padding-top: 5px; padding-bottom: 5px;
-}
-.btn-midia-you:hover {
-    background-color: var(--cor-botao);
-    transition: 0.3s;
-}
-@media (max-width: 738px) {
-  
+  background-color: #383838;
+  border-radius: 50%;
+  height: fit-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.3s;
 }
 
-/* Altura padrão da navbar (telas grandes) */
+.btn-midia-ins:hover,
+.btn-midia-you:hover {
+  background-color: var(--cor-botao);
+}
+
+/* ======== NAVBAR ======== */
 .navbar {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-/* Altura menor da navbar em telas menores que 738px */
+/* Navbar menor em telas menores */
 @media (max-width: 738px) {
   .navbar {
     padding-top: 0.6rem;
@@ -87,15 +118,30 @@
   }
 
   .navbar-brand img {
-    width: 90px; /* diminui a logo */
+    width: 90px;
   }
 
   .navbar-toggler img {
     width: 25px;
-    height: 25px; /* diminui o ícone do menu */
+    height: 25px;
   }
 
   .nav-link {
-    font-size: 14px; /* opcional, deixa os links menores */
+    font-size: 14px;
+  }
+}
+
+/* ======== VÍDEO ======== */
+@media (max-width: 1480px) {
+  video {
+    object-position: center 20% !important;
+    height: 120% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  video {
+    object-position: center top !important;
+    height: 100% !important;
   }
 }
