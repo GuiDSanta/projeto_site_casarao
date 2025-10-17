@@ -12,6 +12,7 @@
   background-color: var(--cor-primaria);
   position: relative;
   height: 80px; /* altura uniforme opcional */
+  z-index: 1050;
 }
 
 /* Links centrais (somente no desktop) */
