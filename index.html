@@ -52,15 +52,15 @@
 
             <!-- VÍDEO DE FUNDO -->
             <video autoplay muted playsinline loop preload="auto" poster="img/poster1.png" style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 120%;
-        object-fit: cover;
-        object-position: center top;
-        z-index: 0;
-    ">
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 120%;
+                    object-fit: cover;
+                    object-position: center top;
+                    z-index: 0;
+                ">
                 <source src="video/Boas Vindas Conheça nossa Igreja - Comunidade Casarão (1080p, h264, youtube).mp4"
                     type="video/mp4">
             </video>
@@ -83,7 +83,7 @@
                         <h1 class="display-4 fw-bold">Bem-vindo à Comunidade Casarão</h1>
                         <p class="lead">Uma Igreja Família onde todos são bem-vindos. Junte-se a nós para crescer na fé
                             e na comunhão.</p>
-                        <a href="#" class="btn btn-primary btn-lg"
+                        <a href="#sobre" class="btn btn-primary btn-lg"
                             style="background-color: var(--cor-botao); border: 0; border-radius: 5px; font-size: 16px;">Saiba
                             Mais</a>
                     </div>
@@ -112,43 +112,89 @@
 
 
 
-
         <div class="container-fluid py-5" id="sobre" style="background-color: #ffffff;">
-            <div class=" text-center">
-                <h1 class="fw-bold mb-5">Sobre</h1>
+            <div class="text-center">
+                <h1 class="fw-bold mb-4">Sobre Nós</h1>
 
-                <div class="row justify-content-center g-2">
-                    <div class="col-lg-2 col-md-6 col-sm-10 shadow rounded-3 p-4">
+                <!-- TEXTO DESCRITIVO -->
+                <div class="container mb-5" style="max-width: 800px;">
+                    <p class="lead" style="color: #333; text-align: justify;">
+                        A <strong>Comunidade Casarão</strong> é uma igreja família comprometida em viver o evangelho de
+                        forma simples e transformadora. Buscamos crescer juntos em fé, amor e serviço, criando um
+                        ambiente
+                        acolhedor onde cada pessoa é valorizada e encorajada a desenvolver seu relacionamento com Deus.
+                    </p>
+                </div>
+
+                <!-- CARDS -->
+                <div class="row justify-content-center g-3 mb-5" id="sobre-cards">
+                    <div class="col-xl-2 col-lg-4 col-md-5 col-sm-10 shadow rounded-3 p-4 card-sobre">
                         <img src="img/missao.png" alt="Missão" class="mb-3 imagens-mvv">
                         <h3 class="h4 mb-3">Missão</h3>
-                        <p>Compartilhar o amor de Cristo e transformar vidas através do evangelho.</p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 col-sm-10 shadow rounded-3 p-4">
-                        <img src="img/visao.png" alt="Visão" class="mb-3 imagens-mvv">
-                        <h3 class="h4 mb-3">Visão</h3>
-                        <p>Ser uma comunidade vibrante que impacta positivamente a sociedade ao nosso redor.</p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 col-sm-10 shadow rounded-3 p-4">
-                        <img src="img/valores.png" alt="Valores" class="mb-3 imagens-mvv">
-                        <h3 class="h4 mb-3">Valores</h3>
-                        <p>Fé, amor, serviço, integridade e comunhão são os pilares que nos guiam.</p>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-10 shadow rounded-3 p-4">
-                        <img src="img/criancas.png" alt="Ministério Infantil" class="mb-3 imagens-mvv">
-                        <h3 class="h4">Kids</h3>
-                        <p>Cuidamos e ensinamos as crianças com amor, compartilhando a palavra de forma
-                            divertida e edificante.
+                        <p class="lead text-center" style="font-size: 1rem;">
+                            Compartilhar o amor de Cristo e transformar vidas através do evangelho.
                         </p>
                     </div>
 
+                    <div class="col-xl-2 col-lg-4 col-md-5 col-sm-10 shadow rounded-3 p-4  card-sobre">
+                        <img src="img/visao.png" alt="Visão" class="mb-3 imagens-mvv">
+                        <h3 class="h4 mb-3">Visão</h3>
+                        <p class="lead text-center" style="font-size: 1rem;">
+                            Ser uma comunidade vibrante que impacta positivamente a sociedade ao nosso redor.
+                        </p>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-4 col-md-5 col-sm-10 shadow rounded-3 p-4  card-sobre">
+                        <img src="img/valores.png" alt="Valores" class="mb-3 imagens-mvv">
+                        <h3 class="h4 mb-3">Valores</h3>
+                        <p class="lead text-center" style="font-size: 1rem;">
+                            Fé, amor, serviço, integridade e comunhão são os pilares que nos guiam.
+                        </p>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-4 col-md-5 col-sm-10 shadow rounded-3 p-4  card-sobre">
+                        <img src="img/criancas.png" alt="Ministério Infantil" class="mb-3 imagens-mvv">
+                        <h3 class="h4 mb-3">Kids</h3>
+                        <p class="lead text-center" style="font-size: 1rem;">
+                            Cuidamos e ensinamos as crianças com amor, compartilhando a palavra de forma divertida.
+                        </p>
+                    </div>
                 </div>
+
+                
+
+            </div>
+        </div>
+        <div class="container-fluid py-5 text-center text-white position-relative"
+            style="background-image: url('img/poster2.png'); background-size: cover; background-position: center; overflow: hidden;">
+
+            <!-- Camada para efeito de brilho/escurecimento -->
+            <div
+                style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.3); backdrop-filter: brightness(60%); z-index:1;">
+            </div>
+
+            <div class="container position-relative" style="z-index: 2;">
+                <h2 class="fw-bold display-5 mb-3" style="letter-spacing: 1px;">
+                    A Igreja que Serve a Cidade
+                </h2>
+                <p class="lead mx-auto mb-4" style="max-width: 800px; opacity: 0.95;">
+                    Vivemos para amar, acolher e transformar a comunidade com o poder do evangelho.
+                </p>
+                <a href="#contato" class="btn btn-light fw-semibold px-4 py-2 rounded-2 shadow-sm">
+                    Faça Parte Dessa Missão
+                </a>
+            </div>
+
+            <!-- Fundo com textura suave -->
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                style="background: url('img/fundo-igreja.jpg') center/cover no-repeat; opacity: 0.18; filter: blur(2px); z-index: 0;">
             </div>
         </div>
 
 
-        <div class="container-fluid w-100 mx-auto rounded-2 shadow mb-5 py-5 d-block d-none" style="max-width: 1100px;">
+
+        <div class="container-fluid w-100 mx-auto rounded-2 shadow mb-5 py-5 d-block d-none"
+            style="max-width: 1100px; background-color: var(--cor-botao);">
             <div class="container">
                 <div id="carouselExampleAutoplaying" class="carousel slide row" data-bs-ride="carousel">
                     <div class="carousel-inner">

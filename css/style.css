@@ -77,7 +77,8 @@
 
 /* Espaçamento entre os cards e correção responsiva */
 #sobre .row {
-  gap: 2rem !important; /* adiciona espaçamento entre os cards */
+  gap: 2rem !important;
+  /* adiciona espaçamento entre os cards */
   justify-content: center;
 }
 
@@ -130,45 +131,48 @@
     font-size: 14px;
   }
 
-  .lead{
+  .lead {
     font-size: 1rem;
   }
 }
 
-
-/* Scroll horizontal para os cards na seção "Sobre" */
-.sobre-scroll {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: var(--cor-botao) transparent;
+/* Grid normal, sem scroll horizontal */
+#sobre-cards {
+    gap: 2rem;
 }
 
-/* Esconde a barra de rolagem no Chrome, Safari e Edge */
-.sobre-scroll::-webkit-scrollbar {
-  height: 6px;
-}
-.sobre-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-.sobre-scroll::-webkit-scrollbar-thumb {
-  background-color: var(--cor-botao);
-  border-radius: 10px;
+/* Imagens redondas */
+.imagens-mvv {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-/* Aplica o layout de rolagem apenas em telas pequenas */
-@media (max-width: 991px) {
-  .sobre-scroll {
-    display: flex;
-    gap: 15px;
-    padding-bottom: 10px;
-  }
-
-  .sobre-scroll > div {
-    min-width: 270px;
-    flex: 0 0 auto;
-  }
+/* Hover suave nos cards */
+#sobre-cards .col-xl-2,
+#sobre-cards .col-lg-4,
+#sobre-cards .col-md-5,
+#sobre-cards .col-sm-8 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+#sobre-cards .col-xl-2:hover,
+#sobre-cards .col-lg-4:hover,
+#sobre-cards .col-md-5:hover,
+#sobre-cards .col-sm-8:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .card-sobre{
+    max-width: 300px;
+}
+
+}
+
+
+
 
