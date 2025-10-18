@@ -129,6 +129,10 @@
   .nav-link {
     font-size: 14px;
   }
+
+  .lead{
+    font-size: 1rem;
+  }
 }
 
 /* ======== VÍDEO ======== */
@@ -139,9 +143,40 @@
   }
 }
 
-@media (max-width: 768px) {
-  video {
-    object-position: center top !important;
-    height: 100% !important;
+
+/* Scroll horizontal para os cards na seção "Sobre" */
+.sobre-scroll {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--cor-botao) transparent;
+}
+
+/* Esconde a barra de rolagem no Chrome, Safari e Edge */
+.sobre-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.sobre-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sobre-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--cor-botao);
+  border-radius: 10px;
+}
+
+/* Aplica o layout de rolagem apenas em telas pequenas */
+@media (max-width: 991px) {
+  .sobre-scroll {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+
+  .sobre-scroll > div {
+    min-width: 270px;
+    flex: 0 0 auto;
   }
 }
+
