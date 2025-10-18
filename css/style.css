@@ -137,7 +137,7 @@
 
 /* ======== VÍDEO ======== */
 @media (max-width: 1480px) {
-  video {
+  #home video {
     object-position: center 20% !important;
     height: 120% !important;
   }
