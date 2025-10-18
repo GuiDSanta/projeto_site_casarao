@@ -136,12 +136,17 @@
 }
 
 /* ======== VÍDEO ======== */
-@media (max-width: 1480px) {
+@media (min-width: 1480px) {
   #home video {
+    object-position: center 0% !important;
+    height: 100% !important;
+  }
+}
+
+#home video {
     object-position: center 20% !important;
     height: 120% !important;
   }
-}
 
 
 /* Scroll horizontal para os cards na seção "Sobre" */
