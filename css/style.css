@@ -1,5 +1,5 @@
 * {
-  --cor-primaria: #000000;
+  --cor-primaria: #0a0b0c;
   --cor-secundaria: #FF6347;
   --cor-fundo: #F5F5F5;
   --cor-texto: #F5F5F5;
@@ -138,16 +138,16 @@
 
 /* Grid normal, sem scroll horizontal */
 #sobre-cards {
-    gap: 2rem;
+  gap: 2rem;
 }
 
 /* Imagens redondas */
 .imagens-mvv {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 /* Hover suave nos cards */
@@ -155,24 +155,67 @@
 #sobre-cards .col-lg-4,
 #sobre-cards .col-md-5,
 #sobre-cards .col-sm-8 {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #sobre-cards .col-xl-2:hover,
 #sobre-cards .col-lg-4:hover,
 #sobre-cards .col-md-5:hover,
 #sobre-cards .col-sm-8:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
-  .card-sobre{
-    max-width: 300px;
+  .card-sobre {
+    max-width: 85%;
+  }
+  .thumb{
+    margin-bottom: 15px;
+  }
+
+  
 }
 
+
+.infos {
+  padding-bottom: 40px;
+  border-radius: 10px;
 }
 
+[id] {
+  scroll-margin-top: 60px;
+  /* ajuste conforme a altura da sua navbar */
+}
 
+.hero-section {
+  position: relative;
+  min-height: 95vh;
+  overflow: hidden;
+}
 
+/* Imagem principal */
+.hero-bg {
+  background: url('/projeto_comunidade_casarao/img/poster2.png') center/cover no-repeat;
+  filter: brightness(85%);
+  z-index: 0;
+}
+
+/* Camada de textura suave */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/projeto_comunidade_casarao/img/textura.png') center/cover no-repeat;
+  opacity: 0.15;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+/* Gradiente escuro por cima */
+.hero-overlay {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65));
+  backdrop-filter: brightness(70%);
+  z-index: 1;
+}
 
