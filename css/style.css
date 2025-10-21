@@ -82,10 +82,14 @@
   justify-content: center;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   #sobre .col-md-4 {
     max-width: 400px;
     margin-inline: auto;
+  }
+
+  .thumb{
+    margin-bottom: 15px;
   }
 }
 
@@ -170,9 +174,7 @@
   .card-sobre {
     max-width: 85%;
   }
-  .thumb{
-    margin-bottom: 15px;
-  }
+  
 
   
 }
@@ -188,34 +190,4 @@
   /* ajuste conforme a altura da sua navbar */
 }
 
-.hero-section {
-  position: relative;
-  min-height: 95vh;
-  overflow: hidden;
-}
-
-/* Imagem principal */
-.hero-bg {
-  background: url('/projeto_comunidade_casarao/img/poster2.png') center/cover no-repeat;
-  filter: brightness(85%);
-  z-index: 0;
-}
-
-/* Camada de textura suave */
-.hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('/projeto_comunidade_casarao/img/textura.png') center/cover no-repeat;
-  opacity: 0.15;
-  filter: blur(3px);
-  z-index: -1;
-}
-
-/* Gradiente escuro por cima */
-.hero-overlay {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65));
-  backdrop-filter: brightness(70%);
-  z-index: 1;
-}
 
