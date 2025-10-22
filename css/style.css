@@ -173,9 +173,34 @@
 @media (max-width: 768px) {
   .card-sobre {
     max-width: 85%;
-  }
-  
+    max-height: 250px;
+    flex-direction: row;
+    display: flex;
+   
 
+  }
+  .card-sobre img{
+    max-width: 140px;
+    max-height: 140px;
+    justify-content: left;
+    align-items: start;
+    margin-bottom: 0px;
+  }
+  .card-sobre p{
+    padding-right: 25px;
+    padding-left: 25px;
+    align-items: end;
+    justify-content: right;
+     text-align: justify;
+   margin-bottom: 25px;
+  }
+
+  .card-mobile{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: end;
+  }
   
 }
 
@@ -190,4 +215,14 @@
   /* ajuste conforme a altura da sua navbar */
 }
 
+.card-contato:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
 
+.card-contato{
+  word-break: break-word;
+  white-space: normal;
+  text-align: center;
+}
